@@ -3,8 +3,12 @@
 // !. Nombre del cachè y archivos a cachear 
 const CACHE_NAME = "Mi-cache-v1";
 const urlsToCache = [
+    "./",
     "index.html",
-    "offline.html"
+    "offline.html",
+    "icons/vision-icon.png",
+    "icons/nuevo-logo.png",
+    "icons/icon-512x512.png",
 ];
 
 // 2.INSTALL -> se ejecuta al instalar el SW
@@ -23,6 +27,6 @@ self.addEventListener("activate", event => {
                 keys.filter(key=>key !== CACHE_NAME)
                 .map(key=> caches.delete(key))
             )
-        )
-    );
+        )
+    );
 });
