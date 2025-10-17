@@ -30,3 +30,25 @@ self.addEventListener("activate", event => {
         )
     );
 });
+
+// 4. FETCH -> intercepta peticiones de la app
+// intercepta cada petición de la PWA
+// Buscar primero en caché
+// Si no está, busca en Internet
+// En caso de falla, muestra la página offline.html
+self.addEventListener("fetch", event=>{
+    event.respondWidth(
+        caches.match(event.request).then(response => {
+            return response || fetch(event.request).catch (() => caches.match("offline.html"));
+        })
+    );
+});
+
+// 5. PUSH -> notificaciones en segundo plano
+// Manejo de notificaciones push (opcional)
+self.addEventListener("push", event => {
+    const data = event.data ? event.data.text() : "Notificación sin texto";
+    event.waitUntil(
+        self.ServiceWorkerRegistration.showNotification("Mi PWA", {body: data})
+    );
+});
