@@ -21,10 +21,14 @@
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker
-                .register("./sw.js")
+                .register("/MyPWA/sw.js")
                 .then(() => console.log("Service Worker registrado"))
                 .catch(err => console.log("Error al registrar el Service Worker", err));
         }
     </script>
+    <ul>
+        <li> <a href="index.html">Inicio</a></li>
+        <li> <a href="login.html">Login</a></li>
+    </ul>
 </body>
 </html>
