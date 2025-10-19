@@ -1,13 +1,13 @@
 // Estructura bàsica de un Service Worker
-const CACHE_NAME = "Mi-cache-v5";
+const CACHE_NAME = "Mi-cache-v1";
 const urlsToCache = [
     "index.html",
     "offline.html",
     "manifest.json",
-    "icons/favicon-96x96.png",
-    "icons/favicon-192x192.png",
-    "icons/favicon-128x128.png",
-    "icons/favicon-512x512.png"
+    "icons/icon-96x96.png",
+    "icons/icon-192x192.png",
+    "icons/icon-128x128.png",
+    "icons/icon-512x512.png"
 ];
 
 // 2.INSTALL -> se ejecuta al instalar el SW
