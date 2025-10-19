@@ -6,6 +6,7 @@ const urlsToCache = [
     "manifest.json",
     "icons/icon-96x96.png",
     "icons/icon-192x192.png",
+    "icons/icon-128x128.png",
     "icons/icon-512x512.png"
 ];
 
